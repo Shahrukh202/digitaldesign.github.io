@@ -6,21 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital</title>
     <link rel="stylesheet" href="./css.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <div class="main">
         <div class="nav">
             <div class="logo">DASHDIGITAL</div>
-            <div class="menu">
-                <ul>
-                    <li><a href="">CASE STUDIES</a></li>
-                    <li><a href="">WORK</a></li>
+            <div class="menu"  >
+                <ul id="topnav">
+                    <li ><a href="">CASE STUDIES</a></li>
+                    <li><a  href="">WORK</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">CONTACT</a></li>
+                    <button id="dark"><i class="fa-regular fa-moon"></i></button>
+                </ul>
+                <div id="hand-menu" "><button onclick="hand()"><i class="fa-solid fa-bars"></i></button></div>
+                </div>
+        </div>
+        <div id="side">
+        <div id="nav2">
+            <div class="sec">
+            <div class="logo1">
+                DASHDIGITAL</div>
+                
+                <button id="close" onclick="cross()"><i class="fa-solid fa-xmark"></i></button></div>
+            
+                <ul id="topnav1">
+                    <li ><a href="">CASE STUDIES</a></li>
+                    <li><a  href="">WORK</a></li>
                     <li><a href="">ABOUT</a></li>
                     <li><a href="">CONTACT</a></li>
                 </ul>
-            </div>
         </div>
+    </div>
         <div class="head">
             <h1 class="heading">A DIGITAL DESIGN STUDIO DRIVEN BY RESEARCH & STRATEGY</h1>
         </div>
@@ -30,22 +53,22 @@
 
         <div class="scroll">
             <div class="images">
-                <div class="img1"><img src="./1.jpg" alt="">
-                <p>SOPHIE</p>
+                <div class="img1"><img src="./img/1.jpg"alt="" >
+                 <p>SOPHIE</p>
             </div>
-                <div class="img1"><img src="./2.jpg" alt="">
+                <div class="img1"><img src="./img/2.jpg" alt="">
                     <p>TIGER WHEEL</p></div>
-                <div class="img1"><img src="./3.jpg" alt="">
+                <div class="img1"><img src="./img/3.jpg" alt="">
                     <p>LEMKUS</p></div>
-                <div class="img1"><img src="./4.jpg" alt="">
+                <div class="img1"><img src="./img/4.jpg" alt="">
                     <p>BITCOIN</p></div>
-                <div class="img1"><img src="./5.jpg" alt="">
+                <div class="img1"><img src="./img/5.jpg" alt="">
                     <p>SOPHIE LADY</p></div>
-                <div class="img1"><img src="./6.jpg" alt="">
+                <div class="img1"><img src="./img/6.jpg" alt="">
                     <p>MIX COLOR</p></div>
-                <div class="img1"><img src="./7.jpg" alt="">
+                <div class="img1"><img src="./img/7.jpg" alt="">
                     <p>IPHONE 14</p></div>
-                <div class="img1"><img src="./8.jpg" alt="">
+                <div class="img1"><img src="./img/8.jpg" alt="">
                     <p>FEERARI</p></div>
             </div>
         </div>
@@ -59,6 +82,7 @@
             <div class="para1">
                 <p>AND INTERNATIONAL DIGITAL DESIGN STUDIO REMAINING HOW PEOPLE CONNECT WITH BRANDS.</p>
             </div>
+            <div class="para3"> 
             <div class="para2">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque corrupti eius distinctio a voluptates
                     quod commodi incidunt? Magni enim, cum quia nobis praesentium unde inventore cumque tempore qui.
@@ -67,9 +91,25 @@
                 <div class="btn">
                 <a href="">ABOUT US</a>
             </div>
+        </div>
             </div>
         </div>
     </div>
+    <script>
+  let tog = document.getElementById('dark');
+  tog.addEventListener('click',()=>{
+  document.body.classList.toggle('dark-mode')
+  })
+
+
+ let hand=()=>{
+  document.getElementById('side').style.display='block';
+}
+
+let cross=()=>{
+  document.getElementById('side').style.display='none';
+}
+    </script>
 </body>
 
 </html>
