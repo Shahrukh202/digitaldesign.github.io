@@ -19,7 +19,9 @@ body,html{
         font-weight: bold;
     }
 }
-
+.menu{
+    display: flex;
+}
 .menu ul{
     display: flex;
     gap: 25px;
@@ -59,10 +61,11 @@ body,html{
 }
 .images::-webkit-scrollbar{
     width:5px;
-    height: 3.2px;
+    height: 3px;
 }
 .images::-webkit-scrollbar-thumb{
     background-color: rgb(12, 12, 12);
+    cursor: pointer;
 }
 .images::-webkit-scrollbar-track{
     background-color: rgb(235, 230, 230);
@@ -84,10 +87,12 @@ body,html{
 }
 .para1{
   padding: 0 60px;
-  width: 42%;
+  width: 80%;
+  text-align: justify;
 }
 .para2{
-    width: 35%;
+    width: 70%;
+    text-align: justify;
     &>.btn{
      padding-block: 25px;
      
@@ -103,5 +108,119 @@ body,html{
 }
 .aboutpara{
     display: flex;
-    gap: 140px;
+    gap: 150px;
+}
+.img1::before{
+   content: '00-1';
+   display: block;
+   transform: rotate(-90deg);
+   transform-origin:right top;
+   position: relative;
+   top: -50%;
+}
+#dark{
+    padding-inline: 10px;
+    border: 0px;
+    cursor: pointer;
+    background: none;
+   
+    
+} 
+body.dark-mode{
+    background-color: black;
+    color: white;
+ &  a{
+    color: white !important;
+}
+&  i{
+    color: white !important;
+    
+}
+&  .images::-webkit-scrollbar-thumb{
+    background-color: rgb(201, 20, 29);
+}
+&  .images::-webkit-scrollbar-track{
+    background-color: rgb(16, 206, 159);
+    margin: 0 55px;
+}
+& .btn a{
+    background-color: white;
+    color: black !important;
+}
+
+}
+
+body.dark-mode .images::-webkit-scrollbar-thumb:hover{
+    background-color:rgb(190, 201, 42);
+}
+body.dark-mode #nav2{
+    background-color: black;
+}
+#hand-menu button{
+    background: none;
+    border: 0px;
+    font-size: 20px;
+    display: none;
+
+}
+@media (max-width:800px){
+    #hand-menu button{
+        display: block;
+        cursor: pointer;
+        }
+    .menu li a{
+        display: none;
+}
+.heading{
+    font-size: 25px;
+    width: 70%;
+}
+.para{
+    width: 40%;
+}
+}
+#nav2{
+    background-color: rgb(211, 208, 208);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width:30vw;
+    padding: 20px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    
+}
+.sec{
+    display: flex;
+    justify-content: space-between;
+}
+.logo1{
+    font-weight: bold; 
+}
+#side{
+    position:absolute;
+    right: 0%;
+    top: 0%;
+    z-index: 1;
+    display: none;
+}
+#nav2 ul{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    list-style: none;
+    text-decoration: none;
+    margin-top: 25px;
+    &>li>a{
+        text-decoration: none;
+        color: rgb(2, 2, 2);
+        text-decoration:underline;
+    }   
+}
+#close{
+    background: none;
+    border: 0px;
+    font-size: 20px;
+    cursor: pointer;
+
 }
